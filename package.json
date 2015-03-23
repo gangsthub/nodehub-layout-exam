@@ -1,0 +1,32 @@
+{
+  "name": "nodehub-layout-exam",
+  "version": "1.0.0",
+  "description": "test for a job offer",
+  "main": "index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gangsthub/nodehub-layout-exam.git"
+  },
+  "keywords": [
+    "responsive",
+    "web",
+    "commision",
+    "rwd",
+    "layout"
+  ],
+  "author": "bravo@graficos.net",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gangsthub/nodehub-layout-exam/issues"
+  },
+  "homepage": "https://github.com/gangsthub/nodehub-layout-exam",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-banner": "^0.3.1",
+    "grunt-contrib-cssmin": "^0.12.2",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
