@@ -34,10 +34,13 @@
         <![endif]-->
         <div class="header-container">
             <header class="header-navigation wrapper clearfix">
-                <div class="logo">
-                	<img src="images/logo-peq.png" alt="Logo Ghostbusters">
-                </div>
-                <nav role="navigation" id="main-menu" class="wrapper">
+                <div class="logo"></div>
+                <a href="#" id="nav-toggle" title="Show menu">
+                    <span class="line line-1"></span>
+                    <span class="line line-2"></span>
+                    <span class="line line-3"></span>
+                </a>
+                <nav role="navigation" id="main-menu" class="wrapper hidden-menu">
                     <ul>
                         <li><a href="#" title="Enlace falso">Link 1</a></li>
                         <li><a href="#ancla-uno" title="Enlace al contenido">Link 2 (Anlca al contenido)</a></li>
@@ -68,7 +71,7 @@
 		</div>
         <div class="main-container">
             <div class="main wrapper clearfix">
-				<aside id="left-sidebar">
+				<aside id="left-sidebar" class="ie7">
 					<h4>Menú secundario</h4>
 					<ul>
 						<li>Bart</li>
@@ -131,10 +134,8 @@
             </footer>
         </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-
-        <script src="js/main.js"></script>
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="js/output.min.js" defer></script>
         <script src="http://localhost:35729/livereload.js"></script>
     </body>
 </html>

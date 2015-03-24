@@ -1,0 +1,51 @@
+#nav-toggle {
+  width: 20px;
+  height: 15px;
+  position: relative;
+  display: block;
+  margin: 20px auto 15px auto;
+}
+#nav-toggle .line {
+  display: block;
+  background: #ecf0f1;
+  width: 20px;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  border-radius: 2px;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+#nav-toggle .line.line-1 {
+  top: 0;
+}
+#nav-toggle .line.line-2 {
+  top: 50%;
+}
+#nav-toggle .line.line-3 {
+  top: 100%;
+}
+#nav-toggle:hover .line-1, #nav-toggle:focus .line-1 {
+  transform: translateY(-4px);
+  -webkit-transform: translateY(-4px);
+  -moz-transform: translateY(-4px);
+}
+#nav-toggle:hover .line-3, #nav-toggle:focus .line-3 {
+  transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  -moz-transform: translateY(4px);
+}
+#nav-toggle.active .line-1 {
+  transform: translateY(25px) translateX(0) rotate(45deg);
+  -webkit-transform: translateY(25px) translateX(0) rotate(45deg);
+  -moz-transform: translateY(25px) translateX(0) rotate(45deg);
+}
+#nav-toggle.active .line-2 {
+  opacity: 0;
+}
+#nav-toggle.active .line-3 {
+  transform: translateY(-25px) translateX(0) rotate(-45deg);
+  -webkit-transform: translateY(-25px) translateX(0) rotate(-45deg);
+  -moz-transform: translateY(-25px) translateX(0) rotate(-45deg);
+}

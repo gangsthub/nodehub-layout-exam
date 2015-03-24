@@ -4,7 +4,7 @@ grunt.initConfig({
 pkg: grunt.file.readJSON('package.json'),
 
 	banner:   '/*!\n' +
-            ' * RWD TEST for Nodehub\n' +
+            ' * Mobile-first RWD TEST for Nodehub\n' +
             ' * Copyright <%= grunt.template.today("yyyy") %> | Graficos.net\n' +
             ' * Last update: <%= grunt.template.today("dd-mm-yyyy") %> at <%= grunt.template.today("HH:MM:ss") %>\n' +
             ' */\n',
@@ -21,7 +21,7 @@ pkg: grunt.file.readJSON('package.json'),
   },
 
 	cssmin: {
-	  my_target: {
+	  my_css_target: {
 	  		src: 'build/style-prefixed.css',
 	    	dest: 'css/main.min.css',
 	  }
@@ -36,6 +36,14 @@ pkg: grunt.file.readJSON('package.json'),
       src: 'css/*.min.css'
     }
     },
+
+  uglify: {
+    my_js_target: {
+      files: {
+        'js/output.min.js': ['js/main.js']
+      }
+    }
+  },
 
   watch: {
       html: {
@@ -59,6 +67,13 @@ pkg: grunt.file.readJSON('package.json'),
         options: {
           livereload: true
         }
+      },
+      js: {
+        files: 'js/*.js',
+        tasks: ['uglify'],
+        options: {
+          livereload: true,
+        }
       }
     },
 
@@ -80,7 +95,8 @@ pkg: grunt.file.readJSON('package.json'),
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
-	grunt.registerTask('default', ['autoprefixer','cssmin','usebanner', 'connect','watch']);
+	grunt.registerTask('default', ['autoprefixer','cssmin','usebanner', 'uglify','connect','watch']);
 
 };

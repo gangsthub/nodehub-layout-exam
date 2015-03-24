@@ -66,33 +66,10 @@ body {
     max-width: 1024px;
 }
 
-/* ===================
-    ALL: Main colors Theme
-   =================== */
 
 .header-container,
 .footer-container {
     background: black;
-}
-
-
-/* ==============
-    MOBILE: Menu
-   ============== */
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-nav a {
-    display: block;
-    margin-bottom: 10px;
-    padding: 15px 0;
-    text-align: center;
-    text-decoration: none;
-    color: white;
 }
 
 nav a:hover,
@@ -104,9 +81,91 @@ nav a:hover {
     text-decoration: underline;
 }
 
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+
+.header-navigation {
+    display: flex;
+}
+
+#nav-toggle {
+  width: 1.5em;
+  height: 1em;
+  position: absolute;
+  right:2%;
+  display: block;
+  margin: 1.5em auto 0.6em;
+  padding: 1em 1em;
+  z-index: 2
+}
+#nav-toggle .line {
+  display: block;
+  background: #ccc;
+  width: 1.5em;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  border-radius: 2px;
+  transition: all .2s ease-out;
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+}
+#nav-toggle .line.line-1 {
+  top: 20%;
+}
+#nav-toggle .line.line-2 {
+  top: 50%;
+}
+#nav-toggle .line.line-3 {
+  top: 80%;
+}
+#nav-toggle:hover .line-1, #nav-toggle:focus .line-1 {
+  transform: translateY(-1px);
+  -webkit-transform: translateY(-1px);
+  -moz-transform: translateY(-1px);
+}
+#nav-toggle:hover .line-3, #nav-toggle:focus .line-3 {
+  transform: translateY(1px);
+  -webkit-transform: translateY(1px);
+  -moz-transform: translateY(1px);
+}
+#nav-toggle.active .line-1 {
+  transform: translateY(0.65em) translateX(0) rotate(-45deg);
+  -webkit-transform: translateY(0.65em) translateX(0) rotate(-45deg);
+  -moz-transform: translateY(0.65em) translateX(0) rotate(-45deg);
+}
+#nav-toggle.active .line-2 {
+  opacity: 0;
+}
+#nav-toggle.active .line-3 {
+  transform: translateY(-0.65em) translateX(0) rotate(45deg);
+  -webkit-transform: translateY(-0.65em) translateX(0) rotate(45deg);
+  -moz-transform: translateY(-0.65em) translateX(0) rotate(45deg);
+}
+
+.hidden-menu {
+    display: none;
+    visibility: hidden;
+}
+
+#main-menu, #main-menu ul, #main-menu li {
+    transition-property: height;
+    transition-duration: .5s;
+    transition-timing-function: ease-out;
+}
+
 /* ==============
     MOBILE: Main
    ============== */
+
+.logo {
+    background-image: url(../images/logo-movil.png);
+    height: 50px;
+    width:43px;
+    background-repeat: no-repeat;
+}
 
 .main article h1 {
     font-size: 2em;
@@ -129,10 +188,6 @@ nav a:hover {
    ALL: Main style rules
    ========================================================================== */
 
-.header-navigation {
-
-}
-
 .logo {
     margin:1em 0 41px;
     -moz-box-flex: 1;
@@ -146,6 +201,7 @@ nav a:hover {
     -ms-flex: 3;
     -webkit-flex: 3;
     flex: 3;
+    position: relative;
 }
 
 #main-menu ul {
@@ -153,32 +209,26 @@ nav a:hover {
     -moz-align-self: flex-end;
     -ms-flex-item-align: end;
     align-self: flex-end;
-
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 #main-menu li {
     text-transform: uppercase;
-    padding: 21px;
     align-items: stretch;
+    display: block;
 }
 
 #main-menu a {
-    max-width: 141px;
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px 0;
+    text-align: center;
+    text-decoration: none;
+    color: white;
 }
 
-
-#main-menu li:after {
-    content: ' I ';
-    font-family: sans-serif;
-    color:#555;
-    padding-left: 21px;
-    top: 15px;
-    position: relative;
-}
-
-#main-menu li:last-child:after {
-    content: '';
-}
 
 .main {
     width:100%;
@@ -309,11 +359,19 @@ blockquote {
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 480px) {
+@media (max-width: 480px) {
+    
+    #main-menu {
+        right: 7%;
+    }
+    
+}
+
+
+@media (min-width: 480px) {
 
     nav a {
-        margin-bottom: 0;
-        display: inline
+        display: block;
     }
 
     nav li:first-child a {
@@ -343,12 +401,21 @@ blockquote {
     WIDE:
    ==================== */
 
-    nav {
-        width: 38%;
+    .logo {
+    background-image: url(../images/logo-peq.png);
+    height: 100px;
+    width: 85px;
     }
 
     .main {
         width:100%;
+    }
+    #main-menu {
+        right: -14%;
+    }
+
+    #main-menu a {
+        max-width: 141px;
     }
 
     #right-sidebar {
@@ -389,7 +456,11 @@ blockquote {
     -webkit-justify-content: space-between;
     -moz-justify-content: space-between;
     justify-content: space-between;
+    }
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
 }
 
 @media only screen and (min-width: 1024px) {
@@ -398,18 +469,37 @@ blockquote {
         max-width: 1024px;
     }
 
-    #main-menu ul {
-        position: relative;
-        right: -153px;
+    #nav-toggle {
+        visibility: hidden;
+        display: none!important;
+    }
+
+    .hidden-menu {
+        visibility: visible;
+        display: inherit;
     }
 
     #main-menu li {
+        padding: 0 21px;
         display: -webkit-inline-box;
         display: -webkit-inline-flex;
         display: -moz-inline-flex;
         display: -ms-inline-flexbox;
         display: inline-flex;
         position:relative;
+    }
+
+    #main-menu li:after {
+        content: ' I ';
+        font-family: sans-serif;
+        color:#555;
+        padding-left: 21px;
+        top: 15px;
+        position: relative;
+    }
+
+    #main-menu li:last-child:after {
+        content: '';
     }
 
     #main-menu a{
