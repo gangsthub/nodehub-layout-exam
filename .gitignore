@@ -45,3 +45,11 @@ Temporary Items
 #Production files
 /node_modules
 /ignore
+/build
+.htaccess
+npm-deub.log
+
+#not used images
+/images/logo.png
+/images/sello.svg
+/images/sello-gris.svg

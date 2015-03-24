@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Paul Melero -- Web designer - FrontEnd Dev -- @pollobravo
+
+# THANKS
+
+     Nodehub
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr
+    Sublime3: emmet, sublimeGit
+    Grunt: cssmin, watch, connect, livereload, usebanner
+    Git

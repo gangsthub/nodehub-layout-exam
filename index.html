@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Bart The Daredevil | RWD test for NodeHub</title>
+        <meta name="description" content="156 characters here...">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- icons -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="144x144"  href="/android-icon-144x144.png">
+		<link rel="icon" type="image/png" sizes="72x72"  href="/android-icon-72x72.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+		<!-- not indexed -->
+		<meta name="robots" content="noindex">
+		<!-- stylesheets -->
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.min.css">
+        <!-- Not media queries supported? respond.js -->
+        <!--[if lt IE 9]>
+            <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">Está usando un navegador muy viejo. Por favor, <a href="http://browsehappy.com/">actualícelo</a> par mejorar la experiencia.</p>
+        <![endif]-->
+        <div class="header-container">
+            <header class="header-navigation wrapper clearfix">
+                <div class="logo">
+                	<img src="images/logo-peq.png" alt="Logo Ghostbusters">
+                </div>
+                <nav role="navigation" id="main-menu" class="wrapper">
+                    <ul>
+                        <li><a href="#" title="Enlace falso">Link 1</a></li>
+                        <li><a href="#ancla-uno" title="Enlace al contenido">Link 2 (Anlca al contenido)</a></li>
+                        <li><a href="#" title="Enlace falso">Link 3</a></li>
+                        <li><a href="http://google.com" rel="nofollow" target="_blank" title="Enlace externo, con nofollow y target blank">Link 4(Externo)</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <div class="images-rounded-containter">
+        	<div class="images-rounded-item">
+        		<img src="images/imagen.gif" alt="">
+        	</div>
+        	<div class="images-rounded-item">
+        		<img src="images/imagen.gif" alt="">
+        	</div>
+        	<div class="images-rounded-item">
+        		<img src="images/imagen.gif" alt="">
+        	</div>
+        	<div class="images-rounded-item">
+        		<img src="images/imagen.gif" alt="">
+        	</div>
+        </div>
+		<div class="slogan-container">
+			<blockquote class="slogan">
+				Facts are meaningless. You could use facts to prove anything that's its remotely true!
+			</blockquote>
+		</div>
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+				<aside id="left-sidebar">
+					<h4>Menú secundario</h4>
+					<ul>
+						<li>Bart</li>
+						<li>Homer</li>
+						<li>Duffman</li>
+					</ul>
+				</aside>
+                <article>
+                    <header class="clearfix">
+                        <h1>Bart The Daredevil - h1</h1>
+                        <p>Bart! With $10,000, we'd be millionaires! We could buy all kinds of useful things... like love! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
+                    </header>
+                    <section>
+                        <h2 id="ancla-uno">article section - h2</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
+                    </section>
+                    <section>
+                        <h2>article section - h2</h2>
+                        <ul id="ul-bolito">
+                        	<li>ul#ul-bolito li 1</li>
+                        	<li>ul#ul-bolito li 2</li>
+                        	<li>ul#ul-bolito li 3</li>
+                        	<li>ul#ul-bolito li 4</li>
+                        	<li>ul#ul-bolito li 5</li>
+                        </ul>
+                    </section>
+                    <footer class="clearfix">
+                        <h3>article footer - h3</h3>
+                        <ol id="ol-red">
+                        	<li>ol.ol-red li 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor.</li>
+                        	<li>ol.ol-red li 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor.</li>
+                        	<li>ol.ol-red li 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor.</li>
+                        </ol>
+                    </footer>
+                </article>
+
+                <aside id="right-sidebar">
+                    <h4>Newsletter!</h4>
+                    <div class="form-wrapper">
+	                    <form action="" method="post">
+						  <input id="POST-name" type="text" name="name" placeholder="Name">
+						  <!--
+						  TODO:
+						  Debería ser email, no? Pero en la maqueta ponía "Message".
+						  Habría que cambiar type="text" por type="email"
+						  -->
+						  <input id="POST-mail" type="text" name="message" placeholder="Message">
+						  <input type="submit" value="Send">
+						</form>
+					</div>
+                </aside>
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper" id="footer">
+                <div class="ribbon"><!-- svg with fallback --></div>
+                <p>You think water moves fast? You should see ice. It moves like it has a mind.</p>
+            </footer>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/main.js"></script>
+        <script src="http://localhost:35729/livereload.js"></script>
+    </body>
+</html>
