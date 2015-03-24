@@ -18,6 +18,8 @@
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">
+        <!-- NO OG-properties this time, just: -->
+        <meta name="author" content="@pollobravo">
 		<!-- not indexed -->
 		<meta name="robots" content="noindex">
 		<!-- stylesheets -->
@@ -30,18 +32,21 @@
     </head>
     <body>
         <!--[if lt IE 8]>
-            <p class="browserupgrade">Está usando un navegador muy viejo. Por favor, <a href="http://browsehappy.com/">actualícelo</a> par mejorar la experiencia.</p>
+            <p class="browserupgrade">Está usando un navegador muy viejo. Por favor, <a href="http://browsehappy.com/">actualícelo</a> para mejorar la experiencia.</p>
         <![endif]-->
+        <!-- The menu -->
         <div class="header-container">
             <header class="header-navigation wrapper clearfix">
-                <div class="logo"></div>
-                <a href="#" id="nav-toggle" title="Show menu">
+                <div class="logo-container">
+                    <div class="logo"></div>
+                </div>
+                <a href="#" id="nav-toggle" title="Show menu" class="">
                     <span class="line line-1"></span>
                     <span class="line line-2"></span>
                     <span class="line line-3"></span>
                 </a>
-                <nav role="navigation" id="main-menu" class="wrapper hidden-menu">
-                    <ul>
+                <nav role="navigation" id="main-menu" class="wrapper shown-menu hidden-menu">
+                    <ul class="rwd-toggle rwd-hidden">
                         <li><a href="#" title="Enlace falso">Link 1</a></li>
                         <li><a href="#ancla-uno" title="Enlace al contenido">Link 2 (Anlca al contenido)</a></li>
                         <li><a href="#" title="Enlace falso">Link 3</a></li>
@@ -50,30 +55,39 @@
                 </nav>
             </header>
         </div>
+        <!-- First section: images -->
         <div class="images-rounded-containter">
-        	<div class="images-rounded-item">
-        		<img src="images/imagen.gif" alt="">
-        	</div>
-        	<div class="images-rounded-item">
-        		<img src="images/imagen.gif" alt="">
-        	</div>
-        	<div class="images-rounded-item">
-        		<img src="images/imagen.gif" alt="">
-        	</div>
-        	<div class="images-rounded-item">
-        		<img src="images/imagen.gif" alt="">
-        	</div>
+            <div class="images-wrapper">
+            	<div class="images-rounded-item">
+            		<img src="images/imagen.gif" alt="">
+            	</div>
+            	<div class="images-rounded-item">
+            		<img src="images/imagen.gif" alt="">
+            	</div>
+            	<div class="images-rounded-item">
+            		<img src="images/imagen.gif" alt="">
+            	</div>
+            	<div class="images-rounded-item">
+            		<img src="images/imagen.gif" alt="">
+            	</div>
+            </div>
         </div>
+        <!-- Breadcrumbs: slogan -->
 		<div class="slogan-container">
 			<blockquote class="slogan">
 				Facts are meaningless. You could use facts to prove anything that's its remotely true!
 			</blockquote>
 		</div>
+        <!-- My content: html5 magic -->
         <div class="main-container">
             <div class="main wrapper clearfix">
 				<aside id="left-sidebar" class="ie7">
 					<h4>Menú secundario</h4>
 					<ul>
+                    <!--
+                        TODO:
+                        sin enlaces??
+                     -->
 						<li>Bart</li>
 						<li>Homer</li>
 						<li>Duffman</li>
@@ -126,16 +140,17 @@
 
             </div> <!-- #main -->
         </div> <!-- #main-container -->
-
+        <!-- My footer on the bottom -->
         <div class="footer-container">
             <footer class="wrapper" id="footer">
                 <div class="ribbon"><!-- svg with fallback --></div>
                 <p>You think water moves fast? You should see ice. It moves like it has a mind.</p>
             </footer>
         </div>
-
+        <!-- Algunos scripts, algunos con la propiedad de Chromium de `defer` -->
         <script src="js/vendor/jquery-1.11.2.min.js"></script>
         <script src="js/output.min.js" defer></script>
+        <script src="js/vendor/modernizr.min.js"></script>
         <script src="http://localhost:35729/livereload.js"></script>
     </body>
 </html>

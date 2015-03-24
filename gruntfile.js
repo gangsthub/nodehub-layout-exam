@@ -55,6 +55,13 @@ pkg: grunt.file.readJSON('package.json'),
           debounceDelay: 250
         },
       },
+      js: {
+        files: 'js/*.js',
+        tasks: ['uglify'],
+        options: {
+          livereload: true,
+        }
+      },
       css: {
         files: 'css/main.css',
         tasks: ['autoprefixer', 'cssmin'],
@@ -66,13 +73,6 @@ pkg: grunt.file.readJSON('package.json'),
         files: 'gruntfile.js',
         options: {
           livereload: true
-        }
-      },
-      js: {
-        files: 'js/*.js',
-        tasks: ['uglify'],
-        options: {
-          livereload: true,
         }
       }
     },

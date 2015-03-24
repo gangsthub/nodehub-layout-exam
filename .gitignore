@@ -48,6 +48,7 @@ Temporary Items
 /build
 .htaccess
 npm-deub.log
+js/vendor/modernizr.min.js
 
 #not used images
 /images/logo.png
