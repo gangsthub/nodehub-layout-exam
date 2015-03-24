@@ -360,11 +360,11 @@ blockquote {
    ========================================================================== */
 
 @media (max-width: 480px) {
-    
+
     #main-menu {
         right: 7%;
     }
-    
+
 }
 
 
@@ -412,6 +412,26 @@ blockquote {
     }
     #main-menu {
         right: -14%;
+    }
+
+    #nav-toggle {
+        visibility: hidden;
+        display: none!important;
+    }
+
+    .hidden-menu {
+        visibility: visible;
+        display: inherit;
+    }
+
+    #main-menu li {
+        padding: 0 .5em;
+        display: -webkit-inline-box;
+        display: -webkit-inline-flex;
+        display: -moz-inline-flex;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        position:relative;
     }
 
     #main-menu a {
@@ -468,25 +488,9 @@ blockquote {
     .header-navigation {
         max-width: 1024px;
     }
-
-    #nav-toggle {
-        visibility: hidden;
-        display: none!important;
-    }
-
-    .hidden-menu {
-        visibility: visible;
-        display: inherit;
-    }
-
+    
     #main-menu li {
         padding: 0 21px;
-        display: -webkit-inline-box;
-        display: -webkit-inline-flex;
-        display: -moz-inline-flex;
-        display: -ms-inline-flexbox;
-        display: inline-flex;
-        position:relative;
     }
 
     #main-menu li:after {
