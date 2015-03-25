@@ -18,11 +18,3 @@ $( document ).ready(function() {
 	return false;
   });
 });
-
-
-// Shivs
-
-//change the html5shiv options object
-window.html5.elements = 'mark section customelement';
-//and re-invoke the `shivDocument` method
-html5.shivDocument(document);

@@ -32,14 +32,14 @@
         <![endif]-->
     </head>
     <body>
-        <!--[if lt IE 8]>
+        <!--[if lt IE 9]>
             <p class="browserupgrade">Está usando un navegador muy viejo. Por favor, <a href="http://browsehappy.com/">actualícelo</a> para mejorar la experiencia.</p>
         <![endif]-->
         <!-- The menu -->
         <div class="header-container">
             <header class="header-navigation wrapper clearfix">
                 <div class="logo-container">
-                    <div class="logo"></div>
+                    <a href="/" title="Home"><div class="logo"></div></a>
                 </div>
                 <a href="#" id="nav-toggle" title="Show menu" class="">
                     <span class="line line-1"></span>
@@ -82,7 +82,6 @@
         <!-- My content: html5 magic -->
         <div class="main-container">
             <div class="main wrapper clearfix">
-                <span class="clearfix"></span>
 				<aside id="left-sidebar" class="ie7">
 					<h4>Menú secundario</h4>
 					<ul>
@@ -127,15 +126,16 @@
                 <aside id="right-sidebar">
                     <h4>Newsletter!</h4>
                     <div class="form-wrapper">
+                        <!-- No para la validación de w3c por tener el `action` vacío -->
 	                    <form action="" method="post" role="form">
-						  <input id="POST-name" type="text" name="name" placeholder="Name">
+						  <input id="POST-name" type="text" name="name" placeholder="Name" required>
 						  <!--
 						  TODO:
 						  Debería ser email, no? Pero en la maqueta ponía "Message".
 						  Habría que cambiar type="text" por type="email".
 						  -->
-						  <input id="POST-mail" type="text" name="message" placeholder="Message">
-						  <input type="submit" value="Send">
+						  <input id="POST-mail" type="text" name="message" placeholder="Message" required>
+						  <input type="submit" value="Send" role="button">
 						</form>
 					</div>
                 </aside>
@@ -152,7 +152,6 @@
         <!-- Algunos scripts, algunos con la propiedad de Chromium de `defer` -->
         <script src="js/vendor/jquery-1.11.2.min.js"></script>
         <script src="js/output.min.js" defer></script>
-
-        <!-- <script src="http://localhost:35729/livereload.js"></script> -->
+        <script src="http://localhost:35729/livereload.js"></script>
     </body>
 </html>
