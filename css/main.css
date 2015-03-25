@@ -459,13 +459,13 @@ blockquote {
     #main-menu {
         right: 7%;
     }
-    
+
     .rwd-toggle {
         margin-left: 2em;
     }
-    
+
     /* Form */
-    
+
     form input {
         width:90%;
     }
@@ -516,7 +516,7 @@ blockquote {
     .rwd-toggle {
         margin-left: 2em;
     }
-    
+
     /* Form */
 
     .form-wrapper {
@@ -759,7 +759,7 @@ blockquote {
         flex: 1 25%;
         background-color: #D2D2D2;
     }
-    
+
     /*Forms*/
 
     /* Form */
